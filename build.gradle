@@ -10,12 +10,18 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+//    testImplementation platform('org.junit:junit-bom:5.10.0')
+//    testImplementation 'org.junit.jupiter:junit-jupiter'
     testImplementation 'org.testng:testng:7.9.0'
-    implementation 'org.seleniumhq.selenium:selenium-java:4.18.1'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.21.0'
+    implementation 'org.testng:testng:7.10.2'
+    implementation("org.slf4j:slf4j-nop:2.0.6")
+
+
 }
 
 test {
-    useJUnitPlatform()
+    useTestNG(){
+//    suites "resources/testng.xml"
+        }
 }

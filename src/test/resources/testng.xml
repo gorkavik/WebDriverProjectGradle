@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="/Users/user/Documents/WebDriverProjectGradle">
+        <classes>
+            <class name="org.example.LoginTest">
+                <methods>
+                    <include name="validLoginTest"/>
+                </methods>
+            </class>
+            <class name="org.example.LoginTestParametrized">
+                <methods>
+                    <include name="validLoginParametrizedTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
