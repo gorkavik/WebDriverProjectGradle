@@ -5,12 +5,19 @@
         <classes>
             <class name="org.example.LoginTest">
                 <methods>
-                    <include name="validLoginTest"/>
+                    <exclude name="validLoginTest"/>
                 </methods>
             </class>
-            <class name="org.example.LoginTestParametrized">
+            <class name="org.example.LoginParametrizedTest">
                 <methods>
-                    <include name="validLoginParametrizedTest"/>
+                    <exclude name="validLoginParametrizedTest"/>
+                </methods>
+            </class>
+            <class name="org.example.HardAndSoftAssertTest">
+                <methods>
+                    <include name="hardAssertTest"/>
+                    <include name="softAssertTest"/>
+
                 </methods>
             </class>
         </classes>

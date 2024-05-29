@@ -1,6 +1,9 @@
 package org.example;
 
 
+import org.example.helpfiles.ConfProperties;
+import org.example.helpfiles.HomePage;
+import org.example.helpfiles.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
