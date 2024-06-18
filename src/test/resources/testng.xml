@@ -15,9 +15,9 @@
             </class>
             <class name="org.example.HardAndSoftAssertTest">
                 <methods>
-                    <include name="hardAssertTest"/>
                     <include name="softAssertTest"/>
-
+                    <include name="softAssertSecondTest"/>
+                    <include name="hardAssertTest"/>
                 </methods>
             </class>
         </classes>
