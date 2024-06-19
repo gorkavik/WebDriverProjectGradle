@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite">
+<suite name="All Test Suite" parallel="true">
     <test verbose="2" preserve-order="true" name="/Users/user/Documents/WebDriverProjectGradle">
         <classes>
             <class name="org.example.LoginTest">
@@ -15,9 +15,16 @@
             </class>
             <class name="org.example.HardAndSoftAssertTest">
                 <methods>
+                    <exclude name="softAssertTest"/>
+                    <exclude name="softAssertSecondTest"/>
+                    <exclude name="hardAssertTest"/>
+                </methods>
+            </class>
+            <class name="org.example.DependentTest">
+                <methods>
+                    <include name="hardAssertTest"/>
                     <include name="softAssertTest"/>
                     <include name="softAssertSecondTest"/>
-                    <include name="hardAssertTest"/>
                 </methods>
             </class>
         </classes>

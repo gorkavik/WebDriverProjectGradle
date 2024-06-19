@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae69827e-b465-4d46-8bb6-5f7dc3ea16d7" name="Changes" comment="Переместила файлы в каталог helpfiles, переименовала тест">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="ae69827e-b465-4d46-8bb6-5f7dc3ea16d7" name="Changes" comment="Добавила тест с hard и soft assert">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/HardAndSoftAssertTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/HardAndSoftAssertTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +115,7 @@
     &quot;Gradle.WebDriverProjectGradle [testClasses].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.WebDriverProjectGradle [test].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG./Users/user/Documents/WebDriverProjectGradle/src/test/resources/testng.xml.executor&quot;: &quot;Run&quot;,
     &quot;TestNG./Users/user/Documents/WebDriverProjectGradle/testng.xml.executor&quot;: &quot;Coverage&quot;,
     &quot;git-widget-placeholder&quot;: &quot;add-parametrized-login-test&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -279,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716500759993</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Добавила тест с hard и soft assert">
+      <option name="closed" value="true" />
+      <created>1718744175924</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718744175924</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -298,7 +305,10 @@
     <MESSAGE value="Project created" />
     <MESSAGE value="Добавила параметризованный логин тест, настроила запуск из testng.xml" />
     <MESSAGE value="пачка фиксов плюс тест на soft и  hard assert" />
-    <option name="LAST_COMMIT_MESSAGE" value="пачка фиксов плюс тест на soft и  hard assert" />
+    <MESSAGE value="Добавила тест с hard и soft assert и пункт с порядком выполнения, сделала через testng.xml, но знаю есть еще аннотация Order от JUnit" />
+    <MESSAGE value="Добавила тест с hard и soft assert и пункт с порядком выполнения, сделала через testng.xml, yj знаю есть еще аннотация Order от JUnit" />
+    <MESSAGE value="Добавила тест с hard и soft assert и пункт с порядком выполнения, сделала через testng.xml, но знаю есть еще аннотация Order от JUnit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавила тест с hard и soft assert и пункт с порядком выполнения, сделала через testng.xml, но знаю есть еще аннотация Order от JUnit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WebDriverProjectGradle$_Users_user_Documents_WebDriverProjectGradle_testng_xml.ic" NAME="$PROJECT_DIR$/testng.xml Coverage Results" MODIFIED="1715692213497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />
