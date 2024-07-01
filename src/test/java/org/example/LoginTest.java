@@ -4,7 +4,9 @@ package org.example;
 import org.example.helpfiles.ConfProperties;
 import org.example.helpfiles.HomePage;
 import org.example.helpfiles.LoginPage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -14,6 +16,7 @@ import org.testng.Assert;
 public class LoginTest {
 
     private static final String ERROR_MESSAGE_AFTER_LOGIN = "Пользователь не вошел";
+    private static final String ERROR_MESSAGE_TITLE = "Нет заголовка";
     private static final String WEBDRIVER_PROPERTY = "webdriver.chrome.driver";
 
     public static LoginPage loginPage;
@@ -30,17 +33,26 @@ public class LoginTest {
         driver.manage().window().maximize();
         driver.get(ConfProperties.getProperty("loginpage"));
     }
+// ниже применение Chain of invocations
+    @Test
+    public static void titleExist() {
+        Assert.assertTrue(driver.findElement(By.className("login_logo")).getText().contains("Swag Labs"), ERROR_MESSAGE_TITLE);
+    }
+
 
     @Test
-    public static void validLoginTest()  {
+    public static void validLoginTest() {
+        // ниже пример использования Steps pattern
         loginPage.inputLogin(ConfProperties.getProperty("login"));
         loginPage.inputPasswd(ConfProperties.getProperty("password"));
         loginPage.clickLoginBtn();
 
         String getPageTitle = homePage.getPageTitle();
-        Assert.assertEquals(getPageTitle, expectedHomePageTitle, ERROR_MESSAGE_AFTER_LOGIN );
+        Assert.assertEquals(getPageTitle, expectedHomePageTitle, ERROR_MESSAGE_AFTER_LOGIN);
     }
+
     @AfterTest
     public static void tearDown() {
-        driver.quit(); }
+        driver.quit();
+    }
 }
