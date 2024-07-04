@@ -26,6 +26,5 @@ public class HomePage {
 
     public String getFirstItem() {
         return firstElement.getText();
-
     }
 }

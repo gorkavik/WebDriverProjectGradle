@@ -1,17 +1,15 @@
 package org.example;
 
-
 import org.example.helpfiles.ConfProperties;
 import org.example.helpfiles.HomePage;
 import org.example.helpfiles.LoginPage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import org.testng.Assert;
 
 public class LoginTest {
 
@@ -33,7 +31,8 @@ public class LoginTest {
         driver.manage().window().maximize();
         driver.get(ConfProperties.getProperty("loginpage"));
     }
-// ниже применение Chain of invocations
+
+    // ниже применение Chain of invocations
     @Test
     public static void titleExist() {
         Assert.assertTrue(driver.findElement(By.className("login_logo")).getText().contains("Swag Labs"), ERROR_MESSAGE_TITLE);
@@ -45,10 +44,11 @@ public class LoginTest {
         loginPage.loginFromProperties();
 
         String getPageTitle = homePage.getPageTitle();
-        Assert.assertEquals(getPageTitle, expectedHomePageTitle, ERROR_MESSAGE_AFTER_LOGIN );
+        Assert.assertEquals(getPageTitle, expectedHomePageTitle, ERROR_MESSAGE_AFTER_LOGIN);
     }
 
     @AfterTest
     public static void tearDown() {
-        driver.quit(); }
+        driver.quit();
+    }
 }

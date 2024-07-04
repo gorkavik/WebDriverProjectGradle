@@ -37,6 +37,7 @@ public class ConfProperties {
                 }
         }
     }
+
     //метод для возврата строки со значением из файла с настройками
     public static String getProperty(String key) {
         return properties.getProperty(key);
