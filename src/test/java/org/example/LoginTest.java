@@ -32,15 +32,15 @@ public class LoginTest {
     }
 
     @Test
-    public static void validLoginTest()  {
-        loginPage.inputLogin(ConfProperties.getProperty("login"));
-        loginPage.inputPasswd(ConfProperties.getProperty("password"));
-        loginPage.clickLoginBtn();
+    public static void validLoginTest() {
+        loginPage.loginFromProperties();
 
         String getPageTitle = homePage.getPageTitle();
-        Assert.assertEquals(getPageTitle, expectedHomePageTitle, ERROR_MESSAGE_AFTER_LOGIN );
+        Assert.assertEquals(getPageTitle, expectedHomePageTitle, ERROR_MESSAGE_AFTER_LOGIN);
     }
+
     @AfterTest
     public static void tearDown() {
-        driver.quit(); }
+        driver.quit();
+    }
 }

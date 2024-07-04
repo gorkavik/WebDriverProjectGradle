@@ -1,5 +1,6 @@
 package org.example;
 
+import org.example.helpfiles.BaseTestNoLogin;
 import org.example.helpfiles.ConfProperties;
 import org.example.helpfiles.HomePage;
 import org.example.helpfiles.LoginPage;
@@ -12,7 +13,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class LoginParametrizedXmlTest {
+public class LoginParametrizedXmlTest extends BaseTestNoLogin {
 
     private static final String ERROR_MESSAGE_AFTER_LOGIN = "Пользователь не вошел";
     private static final String WEBDRIVER_PROPERTY = "webdriver.chrome.driver";
@@ -22,36 +23,13 @@ public class LoginParametrizedXmlTest {
     public static WebDriver driver;
     private static String expectedHomePageTitle = "Products";
 
-    @BeforeTest
-    public static void setup() {
-        System.setProperty(WEBDRIVER_PROPERTY, ConfProperties.getProperty("chromedriver"));
-        driver = new ChromeDriver();
-        loginPage = new LoginPage(driver);
-        homePage = new HomePage(driver);
-        driver.manage().window().maximize();
-
-    }
-
     @Test
-    @Parameters({"paramnameLogin","paramNamePassword"})
+    @Parameters({"paramNameLogin", "paramNamePassword"})
     public static void validLoginParametrizedTest(String username, String password) {
         driver.get(ConfProperties.getProperty("loginpage"));
-        loginPage.inputLogin(username);
-        loginPage.inputPasswd(password);
-        loginPage.clickLoginBtn();
+        loginPage.loginWithParameters(username, password);
 
         String getPageTitle = homePage.getPageTitle();
         Assert.assertEquals(getPageTitle, expectedHomePageTitle, ERROR_MESSAGE_AFTER_LOGIN);
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
     }
-
-    @AfterTest
-    public static void tearDown() {
-        driver.quit();
-    }
-
 }

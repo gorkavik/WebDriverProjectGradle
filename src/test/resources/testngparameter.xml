@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" parallel="true">
     <test name="sampleTest">
-        <parameter name="paramnameLogin" value="standard_user"/>
+        <parameter name="paramNameLogin" value="standard_user"/>
         <parameter name="paramNamePassword" value="secret_sauce"/>
         <classes>
             <class name="org.example.LoginParametrizedXmlTest" />
