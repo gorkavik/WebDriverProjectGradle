@@ -28,5 +28,18 @@ public class LoginPage {
         passwdField.sendKeys(passwd); }
 
     public void clickLoginBtn() {
-        loginBtn.click(); }
+        loginBtn.click();
+    }
+
+    public void loginFromProperties() {
+        inputLogin(ConfProperties.getLogin());
+        inputPasswd(ConfProperties.getPassword());
+        clickLoginBtn();
+    }
+
+    public void loginWithParameters(String username, String password) {
+        inputLogin(username);
+        inputPasswd(password);
+        clickLoginBtn();
+    }
 }

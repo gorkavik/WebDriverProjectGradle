@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+//    id 'org.gradle.test-plugins' version '1.15.1'
 }
 
 group = 'org.example'
@@ -17,10 +18,17 @@ dependencies {
 
 }
 
+//test {
+//    enableLogging = true
+//    maxParallelForks = 2
+//    ignoreFailures = true
+//    systemProperty 'key', 'value'
+//}
 test {
     useTestNG(){
-    suites 'resources/suite1.xml'
-    suites 'resources/suite2.xml'
-    parallel 'instances'
+//    suites 'resources/suite1.xml'
+//    suites 'resources/suite2.xml'
+//    suites 'resources/testngparameter.xml'
+//    parallel 'instances'
         }
 }

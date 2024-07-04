@@ -42,17 +42,13 @@ public class LoginTest {
 
     @Test
     public static void validLoginTest() {
-        // ниже пример использования Steps pattern
-        loginPage.inputLogin(ConfProperties.getProperty("login"));
-        loginPage.inputPasswd(ConfProperties.getProperty("password"));
-        loginPage.clickLoginBtn();
+        loginPage.loginFromProperties();
 
         String getPageTitle = homePage.getPageTitle();
-        Assert.assertEquals(getPageTitle, expectedHomePageTitle, ERROR_MESSAGE_AFTER_LOGIN);
+        Assert.assertEquals(getPageTitle, expectedHomePageTitle, ERROR_MESSAGE_AFTER_LOGIN );
     }
 
     @AfterTest
     public static void tearDown() {
-        driver.quit();
-    }
+        driver.quit(); }
 }
