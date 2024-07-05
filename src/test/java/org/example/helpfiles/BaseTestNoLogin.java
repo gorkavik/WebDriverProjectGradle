@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
-public class BaseTestNoLogin {
+public class BaseTestNoLogin implements SetupPage {
 
     protected static final String WEBDRIVER_PROPERTY = "webdriver.chrome.driver";
 
@@ -13,8 +13,10 @@ public class BaseTestNoLogin {
     protected static HomePage homePage;
     protected static WebDriver driver;
 
+    //--ниже реализация паттерна Strategy, для этого создан интерфейс SetupPage
     @BeforeTest
-    public static void setup() {
+    @Override
+    public void setup() {
         System.setProperty(WEBDRIVER_PROPERTY, ConfProperties.getProperty("chromedriver"));
         driver = new ChromeDriver();
         loginPage = new LoginPage(driver);
@@ -23,7 +25,8 @@ public class BaseTestNoLogin {
     }
 
     @AfterTest
-    public static void tearDown() {
+    @Override
+    public void tearDown() {
         driver.quit();
     }
 }

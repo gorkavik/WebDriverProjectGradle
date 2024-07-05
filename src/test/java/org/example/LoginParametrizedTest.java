@@ -12,7 +12,7 @@ public class LoginParametrizedTest extends BaseTestNoLogin {
 
     private static String expectedHomePageTitle = "Products";
 
-    // ниже пример использования паттерна DataProvider
+    //--ниже пример использования паттерна DataProvider
     @DataProvider(name = "credentials")
     public Object[][] loginData() {
         return new Object[][]{{"standard_user", "secret_sauce"}, {"problem_user", "secret_sauce"}};

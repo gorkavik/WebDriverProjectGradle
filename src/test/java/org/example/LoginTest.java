@@ -32,9 +32,9 @@ public class LoginTest {
         driver.get(ConfProperties.getProperty("loginpage"));
     }
 
-    // ниже применение Chain of invocations
     @Test
     public static void titleExist() {
+        //--ниже применение Chain of invocations
         Assert.assertTrue(driver.findElement(By.className("login_logo")).getText().contains("Swag Labs"), ERROR_MESSAGE_TITLE);
     }
 

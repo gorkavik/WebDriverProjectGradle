@@ -1,14 +1,15 @@
 package org.example.helpfiles;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-// весь класс как реализация PageObject
+//--весь класс как реализация PageObject
 public class LoginPage {
 
-    // ниже PageFactory
+    //--ниже PageFactory
     public WebDriver driver;
 
     public LoginPage(WebDriver driver) {
@@ -16,22 +17,22 @@ public class LoginPage {
         this.driver = driver;
     }
 
-    //ниже PageElement
+    //--ниже PageElement
     @FindBy(id = "user-name")
     private WebElement loginField;
 
     @FindBy(css = "input#login-button")
     private WebElement loginBtn;
 
-    @FindBy(id = "password")
-    private WebElement passwdField;
-
-    public void inputLogin(String login) {
+    public LoginPage inputLogin(String login) {
         loginField.sendKeys(login);
+        return this;
     }
 
-    public void inputPasswd(String passwd) {
-        passwdField.sendKeys(passwd);
+    public LoginPage inputPasswd(String passwd) {
+        //--применение Chain of invocations
+        driver.findElement(By.id("password")).sendKeys(passwd);
+        return this;
     }
 
     public void clickLoginBtn() {
@@ -45,8 +46,9 @@ public class LoginPage {
     }
 
     public void loginWithParameters(String username, String password) {
-        inputLogin(username);
-        inputPasswd(password);
-        clickLoginBtn();
+        //--применение Chain of invocations
+        inputLogin(username)
+                .inputPasswd(password)
+                .clickLoginBtn();
     }
 }
