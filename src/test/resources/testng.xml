@@ -1,23 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite" parallel="true">
-    <test verbose="2" preserve-order="true" name="/Users/user/Documents/WebDriverProjectGradle">
+    <test verbose="2" preserve-order="true" name="WebDriverProjectGradle">
         <classes>
             <class name="org.example.LoginTest">
                 <methods>
-                    <exclude name="validLoginTest"/>
+                    <include name="titleExist"/>
+                    <include name="validLoginTest"/>
                 </methods>
             </class>
             <class name="org.example.LoginParametrizedTest">
                 <methods>
-                    <exclude name="validLoginParametrizedTest"/>
-                </methods>
-            </class>
-            <class name="org.example.HardAndSoftAssertTest">
-                <methods>
-                    <exclude name="softAssertTest"/>
-                    <exclude name="softAssertSecondTest"/>
-                    <exclude name="hardAssertTest"/>
+                    <include name="validLoginParametrizedTest"/>
                 </methods>
             </class>
             <class name="org.example.DependentTest">
@@ -27,7 +21,13 @@
                     <include name="softAssertSecondTest"/>
                 </methods>
             </class>
+            <class name="org.example.HardAndSoftAssertTest">
+                <methods>
+                    <include name="softAssertTest"/>
+                    <include name="softAssertSecondTest"/>
+                    <include name="hardAssertTest"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
-

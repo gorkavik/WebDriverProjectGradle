@@ -1,4 +1,4 @@
-package org.example.helpfiles;
+package org.example.helpers;
 
 public class DataProviderClass {
 

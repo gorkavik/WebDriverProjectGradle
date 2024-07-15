@@ -1,7 +1,7 @@
 package org.example;
 
-import org.example.helpfiles.BaseTestNoLogin;
-import org.example.helpfiles.ConfProperties;
+import org.example.helpers.BaseTestNoLogin;
+import org.example.helpers.ConfProperties;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -19,7 +19,7 @@ public class LoginParametrizedTest extends BaseTestNoLogin {
     }
 
     @Test(dataProvider = "credentials")
-    public static void validLoginParametrizedTest(String username, String password) {
+    public void validLoginParametrizedTest(String username, String password) {
         driver.get(ConfProperties.getProperty("loginpage"));
         loginPage.loginWithParameters(username, password);
 

@@ -1,4 +1,4 @@
-package org.example.helpfiles;
+package org.example.helpers;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -43,7 +43,15 @@ public class ConfProperties {
         return properties.getProperty(key);
     }
 
-    public static String getLogin() {return properties.getProperty("login");}
+    public static String getLogin() {
+        return properties.getProperty("login");
+    }
 
-    public static String getPassword() {return properties.getProperty("password");}
+    public static String getPassword() {
+        return properties.getProperty("password");
+    }
+
+    public static String getPropertyChrome() {
+        return properties.getProperty("chromedriver");
+    }
 }

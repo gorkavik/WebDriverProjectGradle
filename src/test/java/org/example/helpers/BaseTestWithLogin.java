@@ -1,20 +1,22 @@
-package org.example.helpfiles;
+package org.example.helpers;
 
+import org.example.pageobject.HomePage;
+import org.example.pageobject.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
-public class BaseTestNoLogin implements SetupPage {
+import static org.example.helpers.Properties.WEBDRIVER_PROPERTY;
 
-    protected static final String WEBDRIVER_PROPERTY = "webdriver.chrome.driver";
+public class BaseTestWithLogin implements SetupPage {
 
-    protected static LoginPage loginPage;
-    protected static HomePage homePage;
-    protected static WebDriver driver;
+    protected LoginPage loginPage;
+    protected HomePage homePage;
+    protected WebDriver driver;
 
     //--ниже реализация паттерна Strategy, для этого создан интерфейс SetupPage
-    @BeforeTest
+    @BeforeClass
     @Override
     public void setup() {
         System.setProperty(WEBDRIVER_PROPERTY, ConfProperties.getProperty("chromedriver"));
@@ -22,9 +24,11 @@ public class BaseTestNoLogin implements SetupPage {
         loginPage = new LoginPage(driver);
         homePage = new HomePage(driver);
         driver.manage().window().maximize();
+        driver.get(ConfProperties.getProperty("loginpage"));
+        loginPage.loginFromProperties();
     }
 
-    @AfterTest
+    @AfterClass
     @Override
     public void tearDown() {
         driver.quit();

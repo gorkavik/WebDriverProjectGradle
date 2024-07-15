@@ -1,7 +1,7 @@
 package org.example;
 
 import com.google.common.base.Verify;
-import org.example.helpfiles.BaseTestWithLogin;
+import org.example.helpers.BaseTestWithLogin;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -14,24 +14,21 @@ public class DependentTest extends BaseTestWithLogin {
     private static final String FIRST_ELEMENT = "Sauce Labs Backpack";
 
     @Test(dependsOnMethods = {"hardAssertTest"})
-    public static void softAssertTest() {
+    public void softAssertTest() {
         String getFirstElement = homePage.getFirstItem();
         Verify.verify(getFirstElement.equals(FIRST_ELEMENT), ERROR_MESSAGE_SOFT_ASSERT);
-        System.out.println("Continue soft assert test");
     }
 
     @Test
-    public static void softAssertSecondTest() {
+    public void softAssertSecondTest() {
         String getFirstElement = homePage.getFirstItem();
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(getFirstElement.equals(FIRST_ELEMENT), ERROR_MESSAGE_SOFT_ASSERT);
-        System.out.println("Continue soft assert second test");
     }
 
     @Test
-    public static void hardAssertTest() {
+    public void hardAssertTest() {
         String getFirstElement = homePage.getFirstItem();
         Assert.assertEquals(getFirstElement, FIRST_ELEMENT_WRONG, ERROR_MESSAGE_HARD_ASSERT);
-        System.out.println("Continue hard assert test");
     }
 }
