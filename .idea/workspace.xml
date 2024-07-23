@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ae69827e-b465-4d46-8bb6-5f7dc3ea16d7" name="Changes" comment="Project created">
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/LoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/LoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/LoginTestNgTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
+    <list default="true" id="ae69827e-b465-4d46-8bb6-5f7dc3ea16d7" name="Changes" comment="Добавила тест с hard и soft assert">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +47,16 @@
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="verification" type="c8890929:TasksNode$1" />
               </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="WebDriverProjectGradle" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="WebDriverProjectGradle" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
             </expand>
             <select />
           </tree_state>
@@ -57,50 +64,73 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "gorkavik"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gorkavik&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/gorkavik/WebDriverProjectGradle.git",
-    "accountId": "1d73deba-0766-4f0f-a4c4-dd4fca486ffb"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/gorkavik/WebDriverProjectGradle.git&quot;,
+    &quot;accountId&quot;: &quot;1d73deba-0766-4f0f-a4c4-dd4fca486ffb&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2gSOmunFiJbC7vODjhMNYB2Nqvj" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build WebDriverProjectGradle.executor": "Run",
-    "Gradle.LoginTest.executor": "Run",
-    "Gradle.WebDriverProjectGradle [check].executor": "Run",
-    "Gradle.WebDriverProjectGradle [testClasses].executor": "Run",
-    "Gradle.WebDriverProjectGradle [test].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG./Users/user/Documents/WebDriverProjectGradle/testng.xml.executor": "Coverage",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/user/Documents/WebDriverProjectGradle/src/test/resources",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.Build WebDriverProjectGradle.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HardAndSoftAssertTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginParametrizedTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.LoginTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WebDriverProjectGradle [check].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WebDriverProjectGradle [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WebDriverProjectGradle [testClasses].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.WebDriverProjectGradle [test].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG./Users/user/Documents/WebDriverProjectGradle/src/test/resources/testng.xml.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG./Users/user/Documents/WebDriverProjectGradle/testng.xml.executor&quot;: &quot;Coverage&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;add-parametrized-login-test&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/user/Documents/WebDriverProjectGradle/src/test/resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -108,7 +138,55 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.LoginTest">
+  <component name="RunManager" selected="TestNG./Users/user/Documents/WebDriverProjectGradle/src/test/resources/testng.xml">
+    <configuration name="HardAndSoftAssertTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.HardAndSoftAssertTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="LoginParametrizedTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.LoginParametrizedTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="LoginTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -133,7 +211,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="WebDriverProjectGradle [check]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="WebDriverProjectGradle [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -144,7 +222,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="check" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -155,53 +233,9 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="WebDriverProjectGradle [testClasses]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="testClasses" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="WebDriverProjectGradle [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="/Users/user/Documents/WebDriverProjectGradle/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="WebDriverProjectGradle" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+    <configuration name="/Users/user/Documents/WebDriverProjectGradle/src/test/resources/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="WebDriverProjectGradle.test" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/test/resources/testng.xml" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -211,11 +245,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG./Users/user/Documents/WebDriverProjectGradle/src/test/resources/testng.xml" />
+        <item itemvalue="Gradle.HardAndSoftAssertTest" />
+        <item itemvalue="Gradle.LoginParametrizedTest" />
+        <item itemvalue="Gradle.WebDriverProjectGradle [clean]" />
         <item itemvalue="Gradle.LoginTest" />
-        <item itemvalue="TestNG./Users/user/Documents/WebDriverProjectGradle/testng.xml" />
-        <item itemvalue="Gradle.WebDriverProjectGradle [test]" />
-        <item itemvalue="Gradle.WebDriverProjectGradle [check]" />
-        <item itemvalue="Gradle.WebDriverProjectGradle [testClasses]" />
       </list>
     </recent_temporary>
   </component>
@@ -236,7 +270,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715688965379</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Добавила параметризованный логин тест, настроила запуск из testng.xml">
+      <option name="closed" value="true" />
+      <created>1716500759993</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716500759993</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Добавила тест с hard и soft assert">
+      <option name="closed" value="true" />
+      <created>1718744175924</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718744175924</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -251,8 +301,14 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Project created" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project created" />
+    <MESSAGE value="Добавила параметризованный логин тест, настроила запуск из testng.xml" />
+    <MESSAGE value="пачка фиксов плюс тест на soft и  hard assert" />
+    <MESSAGE value="Добавила тест с hard и soft assert и пункт с порядком выполнения, сделала через testng.xml, но знаю есть еще аннотация Order от JUnit" />
+    <MESSAGE value="Добавила тест с hard и soft assert и пункт с порядком выполнения, сделала через testng.xml, yj знаю есть еще аннотация Order от JUnit" />
+    <MESSAGE value="Добавила тест с hard и soft assert и пункт с порядком выполнения, сделала через testng.xml, но знаю есть еще аннотация Order от JUnit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавила тест с hard и soft assert и пункт с порядком выполнения, сделала через testng.xml, но знаю есть еще аннотация Order от JUnit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/WebDriverProjectGradle$_Users_user_Documents_WebDriverProjectGradle_testng_xml.ic" NAME="$PROJECT_DIR$/testng.xml Coverage Results" MODIFIED="1715692213497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="true" />

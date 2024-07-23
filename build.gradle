@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+//    id 'org.gradle.test-plugins' version '1.15.1'
 }
 
 group = 'org.example'
@@ -10,12 +11,24 @@ repositories {
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
     testImplementation 'org.testng:testng:7.9.0'
-    implementation 'org.seleniumhq.selenium:selenium-java:4.18.1'
+    implementation 'org.seleniumhq.selenium:selenium-java:4.21.0'
+    implementation 'org.testng:testng:7.10.2'
+    implementation("org.slf4j:slf4j-nop:2.0.6")
+
 }
 
+//test {
+//    enableLogging = true
+//    maxParallelForks = 2
+//    ignoreFailures = true
+//    systemProperty 'key', 'value'
+//}
 test {
-    useJUnitPlatform()
+    useTestNG(){
+//    suites 'resources/suite1.xml'
+//    suites 'resources/suite2.xml'
+//    suites 'resources/testngparameter.xml'
+//    parallel 'instances'
+        }
 }
