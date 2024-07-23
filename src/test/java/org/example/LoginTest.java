@@ -10,12 +10,12 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+
+import static org.example.helpers.Issues.ERROR_MESSAGE_AFTER_LOGIN;
+import static org.example.helpers.Issues.ERROR_MESSAGE_TITLE;
 import static org.example.helpers.Properties.WEBDRIVER_PROPERTY;
 
 public class LoginTest {
-
-    private static final String ERROR_MESSAGE_AFTER_LOGIN = "Пользователь не вошел";
-    private static final String ERROR_MESSAGE_TITLE = "Нет заголовка";
 
     public static LoginPage loginPage;
     public static HomePage homePage;

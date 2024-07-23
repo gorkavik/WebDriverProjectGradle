@@ -6,9 +6,9 @@ import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class LoginParametrizedTest extends BaseTestNoLogin {
+import static org.example.helpers.Issues.ERROR_MESSAGE_AFTER_LOGIN;
 
-    private static final String ERROR_MESSAGE_AFTER_LOGIN = "Пользователь не вошел";
+public class LoginParametrizedTest extends BaseTestNoLogin {
 
     private static String expectedHomePageTitle = "Products";
 

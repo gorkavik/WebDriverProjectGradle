@@ -9,9 +9,9 @@ import org.testng.Assert;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class LoginParametrizedXmlTest extends BaseTestNoLogin {
+import static org.example.helpers.Issues.ERROR_MESSAGE_AFTER_LOGIN;
 
-    private static final String ERROR_MESSAGE_AFTER_LOGIN = "Пользователь не вошел";
+public class LoginParametrizedXmlTest extends BaseTestNoLogin {
 
     public static LoginPage loginPage;
     public static HomePage homePage;

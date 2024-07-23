@@ -6,10 +6,11 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import static org.example.helpers.Issues.ERROR_MESSAGE_HARD_ASSERT;
+import static org.example.helpers.Issues.ERROR_MESSAGE_SOFT_ASSERT;
+
 public class DependentTest extends BaseTestWithLogin {
 
-    private static final String ERROR_MESSAGE_HARD_ASSERT = "Hard assert error - не совпадает";
-    private static final String ERROR_MESSAGE_SOFT_ASSERT = "Soft assert error - не совпадает";
     private static final String FIRST_ELEMENT_WRONG = "Sauce Labs New Backpack";
     private static final String FIRST_ELEMENT = "Sauce Labs Backpack";
 

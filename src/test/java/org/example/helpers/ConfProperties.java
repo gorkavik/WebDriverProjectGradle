@@ -5,11 +5,14 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
+import static org.example.helpers.Issues.ERROR_MESSAGE_FIE_NOT_FOUND;
+import static org.example.helpers.Issues.ERROR_MESSAGE_GENERAL;
+import static org.example.helpers.Properties.PATH_TO_CONFIG;
+
 public class ConfProperties {
 
     private static FileInputStream fileInputStream;
     private static Properties properties;
-    private final static String PATH_TO_CONFIG = "src/test/resources/conf.properties";
 
     static {
         try {
@@ -17,10 +20,10 @@ public class ConfProperties {
             properties = new Properties();
             properties.load(fileInputStream);
         } catch (FileNotFoundException e) {
-            System.out.println("Ошибка, файл не найден!");
+            System.out.println(ERROR_MESSAGE_FIE_NOT_FOUND);
             e.printStackTrace();
         } catch (IOException e) {
-            System.out.println("Ошибка, что-то пошло не так");
+            System.out.println(ERROR_MESSAGE_GENERAL);
             e.getMessage();
             e.printStackTrace();
         } finally {
@@ -28,10 +31,10 @@ public class ConfProperties {
                 try {
                     fileInputStream.close();
                 } catch (FileNotFoundException e) {
-                    System.out.println("Ошибка, файл не найден!");
+                    System.out.println(ERROR_MESSAGE_FIE_NOT_FOUND);
                     e.printStackTrace();
                 } catch (IOException e) {
-                    System.out.println("Ошибка, что-то пошло не так");
+                    System.out.println(ERROR_MESSAGE_GENERAL);
                     e.getMessage();
                     e.printStackTrace();
                 }
