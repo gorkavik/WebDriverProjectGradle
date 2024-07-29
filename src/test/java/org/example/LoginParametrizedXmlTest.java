@@ -1,22 +1,17 @@
 package org.example;
 
-import org.example.helpfiles.BaseTestNoLogin;
-import org.example.helpfiles.ConfProperties;
-import org.example.helpfiles.HomePage;
-import org.example.helpfiles.LoginPage;
+import org.example.helpers.BaseTestNoLogin;
+import org.example.helpers.ConfProperties;
+import org.example.pageobject.HomePage;
+import org.example.pageobject.LoginPage;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class LoginParametrizedXmlTest extends BaseTestNoLogin {
+import static org.example.helpers.Issues.ERROR_MESSAGE_AFTER_LOGIN;
 
-    private static final String ERROR_MESSAGE_AFTER_LOGIN = "Пользователь не вошел";
-    private static final String WEBDRIVER_PROPERTY = "webdriver.chrome.driver";
+public class LoginParametrizedXmlTest extends BaseTestNoLogin {
 
     public static LoginPage loginPage;
     public static HomePage homePage;
@@ -25,7 +20,7 @@ public class LoginParametrizedXmlTest extends BaseTestNoLogin {
 
     @Test
     @Parameters({"paramNameLogin", "paramNamePassword"})
-    public static void validLoginParametrizedTest(String username, String password) {
+    public void validLoginParametrizedTest(String username, String password) {
         driver.get(ConfProperties.getProperty("loginpage"));
         loginPage.loginWithParameters(username, password);
 

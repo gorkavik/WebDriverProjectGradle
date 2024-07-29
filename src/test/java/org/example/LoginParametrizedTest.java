@@ -1,24 +1,25 @@
 package org.example;
 
-import org.example.helpfiles.BaseTestNoLogin;
-import org.example.helpfiles.ConfProperties;
+import org.example.helpers.BaseTestNoLogin;
+import org.example.helpers.ConfProperties;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class LoginParametrizedTest extends BaseTestNoLogin {
+import static org.example.helpers.Issues.ERROR_MESSAGE_AFTER_LOGIN;
 
-    private static final String ERROR_MESSAGE_AFTER_LOGIN = "Пользователь не вошел";
+public class LoginParametrizedTest extends BaseTestNoLogin {
 
     private static String expectedHomePageTitle = "Products";
 
+    //--ниже пример использования паттерна DataProvider
     @DataProvider(name = "credentials")
     public Object[][] loginData() {
         return new Object[][]{{"standard_user", "secret_sauce"}, {"problem_user", "secret_sauce"}};
     }
 
     @Test(dataProvider = "credentials")
-    public static void validLoginParametrizedTest(String username, String password) {
+    public void validLoginParametrizedTest(String username, String password) {
         driver.get(ConfProperties.getProperty("loginpage"));
         loginPage.loginWithParameters(username, password);
 

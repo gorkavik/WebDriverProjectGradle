@@ -5,12 +5,13 @@
         <classes>
             <class name="org.example.LoginTest">
                 <methods>
+                    <include name="titleExist"/>
                     <include name="validLoginTest"/>
                 </methods>
             </class>
             <class name="org.example.LoginParametrizedTest">
                 <methods>
-                    <include name="validLoginParametrizedTest"/>
+                    <exclude name="validLoginParametrizedTest"/>
                 </methods>
             </class>
 
