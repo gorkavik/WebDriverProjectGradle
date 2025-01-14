@@ -6,6 +6,7 @@ import org.example.pageobject.HomePage;
 import org.example.pageobject.LoginPage;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
@@ -19,6 +20,7 @@ public class LoginParametrizedXmlTest extends BaseTestNoLogin {
     private static String expectedHomePageTitle = "Products";
 
     @Test
+    @Ignore
     @Parameters({"paramNameLogin", "paramNamePassword"})
     public void validLoginParametrizedTest(String username, String password) {
         driver.get(ConfProperties.getProperty("loginpage"));

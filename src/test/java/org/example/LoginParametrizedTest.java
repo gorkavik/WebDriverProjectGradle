@@ -1,5 +1,6 @@
 package org.example;
 
+import io.qameta.allure.Step;
 import org.example.helpers.BaseTestNoLogin;
 import org.example.helpers.ConfProperties;
 import org.testng.Assert;
@@ -18,6 +19,7 @@ public class LoginParametrizedTest extends BaseTestNoLogin {
         return new Object[][]{{"standard_user", "secret_sauce"}, {"problem_user", "secret_sauce"}};
     }
 
+    @Step("Параметризированный тест")
     @Test(dataProvider = "credentials")
     public void validLoginParametrizedTest(String username, String password) {
         driver.get(ConfProperties.getProperty("loginpage"));
